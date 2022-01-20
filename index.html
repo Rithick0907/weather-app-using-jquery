@@ -6,19 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <header class="weather-input flex">
-      <button class="btn btn--primary">Get Weather for Current Location</button>
-      <select class="select" name="cities" id="cities">
-        <option value="none">Choose City</option>
-        <option value="Chennai">Chennai</option>
-        <option value="Tiruvannamalai">Tiruvannamalai</option>
-        <option value="Bangalore">Bangalore</option>
-        <option value="Hyderabad">Hyderabad</option>
-        <option value="Mumbai">Mumbai</option>
-      </select>
+    <header class="weather-input">
+      <div class="block block--primary">
+        <div class="container header-container flex">
+          <button id="current-location-weather" class="btn btn--primary">
+            Get Weather for Current Location
+          </button>
+          <select class="select" name="cities" id="cities">
+            <option value="Chennai">Chennai</option>
+            <option value="Tiruvannamalai">Tiruvannamalai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Vellore">Vellore</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
+        </div>
+      </div>
     </header>
+    <main class="weather-output">
+      <div class="location">Chennai</div>
+      <div class="tempurature">
+        <img
+          id="temp-icon"
+          src="./assets/cloudy.png"
+          alt=""
+          width="200px"
+          height="200px"
+        />
+        <p>
+          <span id="temp-value">25</span><span class="temp-unit">&#176;C</span>
+        </p>
+        <div class="climate">Sunny</div>
+      </div>
+    </main>
   </body>
 </html>
