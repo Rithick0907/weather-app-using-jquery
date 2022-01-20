@@ -5,7 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="weather-input flex">
+      <button class="btn btn--primary">Get Weather for Current Location</button>
+      <select class="select" name="cities" id="cities">
+        <option value="none">Choose City</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Tiruvannamalai">Tiruvannamalai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Mumbai">Mumbai</option>
+      </select>
+    </header>
+  </body>
 </html>

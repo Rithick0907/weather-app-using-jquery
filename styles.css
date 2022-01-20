@@ -11,3 +11,42 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
 }
+/* Utility Class Starts*/
+.flex {
+  display: flex;
+  gap: var(--gap, 3rem);
+}
+
+/* Utility Class Ends*/
+.weather-input {
+  margin-block: 2rem;
+  justify-content: center;
+}
+
+/* Button Component */
+.btn {
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  padding: 1rem 0.75rem;
+  font-weight: bold;
+}
+
+.btn--primary {
+  color: white;
+  background-color: tomato;
+}
+
+.btn--primary:hover {
+  background-color: #f14e30;
+}
+
+/* Select Component */
+.select {
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 1rem 0.75rem;
+  color: gray;
+  font-weight: 650;
+  border-radius: 4px;
+}
