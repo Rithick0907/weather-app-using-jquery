@@ -48,10 +48,10 @@ const getWeather = (url) => {
       const { name } = result;
       const { feels_like } = result.main;
       const { id, main } = result.weather[0];
-      $(".location").text(() => name);
-      $("#temp-icon").attr("src", `./assets/${getName(main)}.png`);
+      $("#location").text(() => name);
+      $("#temp-icon").attr("src", `./assets/${getName(id)}.png`);
       $("#temp-value").text(() => feels_like);
-      $(".climate").text(() => main);
+      $("#climate").text(() => main);
 
       console.log(name, feels_like, id, main);
     },

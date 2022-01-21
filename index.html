@@ -26,21 +26,28 @@
         </div>
       </div>
     </header>
-    <main class="weather-output">
-      <div class="location">Chennai</div>
-      <div class="tempurature">
-        <img
-          id="temp-icon"
-          src="./assets/cloudy.png"
-          alt=""
-          width="200px"
-          height="200px"
-        />
-        <p>
-          <span id="temp-value">25</span><span class="temp-unit">&#176;C</span>
-        </p>
-        <div class="climate">Sunny</div>
+    <div class="block block--primary">
+      <div class="container">
+        <div class="weather-output flex">
+          <div class="content-left flex">
+            <h1 id="location">Chennai</h1>
+            <span class="temp-container">
+              <span id="temp-value">25</span>
+              <span class="temp-unit">&#176;C</span>
+            </span>
+            <span id="climate">Sunny</span>
+          </div>
+          <div class="content-right">
+            <img
+              id="temp-icon"
+              src="./assets/cloudy.png"
+              alt=""
+              width="150px"
+              height="150px"
+            />
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
   </body>
 </html>
