@@ -1,9 +1,7 @@
 $(document).ready(() => {
-  const proxy = "https://cors-anywhere.herokuapp.com";
+  const endPoint = "https://api.openweathermap.org/data/2.5/weather";
   const API_KEY = "f847023ac7fd05f740bd61dc050203fe";
-  getWeather(
-    `${proxy}/api.openweathermap.org/data/2.5/weather?q=chennai&appid=${API_KEY}`
-  );
+  getWeather(`${endPoint}?q=chennai&appid=${API_KEY}`);
   $("#current-location-weather").click(() => {
     let latitude;
     let longitude;
@@ -12,7 +10,7 @@ $(document).ready(() => {
       navigator.geolocation.getCurrentPosition((position) => {
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
-        const url = `${proxy}/api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+        const url = `${endPoint}?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
         getWeather(url);
       });
     } else {
@@ -21,7 +19,7 @@ $(document).ready(() => {
   });
   $("#cities").click(() => {
     const selectedCity = $("#cities").find(":selected").text();
-    const url = `${proxy}/api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=${API_KEY}`;
+    const url = `${endPoint}?q=${selectedCity}&appid=${API_KEY}`;
     getWeather(url);
   });
 });
@@ -45,6 +43,7 @@ const getName = (id) => {
 const getWeather = (url) => {
   $.ajax({
     url,
+    crossDomain: true,
     success: (result) => {
       const { name } = result;
       const { feels_like } = result.main;
