@@ -43,7 +43,6 @@ const getName = (id) => {
 const getWeather = (url) => {
   $.ajax({
     url,
-    crossDomain: true,
     success: (result) => {
       const { name } = result;
       const { feels_like } = result.main;
