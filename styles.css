@@ -78,6 +78,16 @@ body {
   margin: 2rem;
   box-shadow: 0 0 15px gray;
 }
+#temp-icon {
+  width: 60px;
+  height: 60px;
+}
+@media screen and (min-width: 550px) {
+  #temp-icon {
+    width: 150px;
+    height: 150px;
+  }
+}
 .content-left {
   flex-direction: column;
   --gap: 0.25rem;
